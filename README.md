@@ -11,12 +11,19 @@
 ```text
 .
 ├── index.json
-└── schema/
-    └── index.schema.json
+├── schema/
+│   └── index.schema.json
+├── scripts/
+│   └── validate_index.py
+└── .github/
+    └── workflows/
+        └── validate-index.yml
 ```
 
 - `index.json`：插件索引的唯一数据文件。
 - `schema/index.schema.json`：索引的 JSON Schema，用于编辑器和校验工具检查格式。
+- `scripts/validate_index.py`：本地与 CI 共用的校验脚本。
+- `.github/workflows/validate-index.yml`：推送到 `main` 或提交 PR 时自动校验。
 
 ## 索引格式
 
@@ -87,3 +94,6 @@
 
 - 一个插件对应 `plugins` 数组中的一个对象。
 - 插件作者更新时修改自己的对象并提交 PR。
+- 推送到 `main` 和 PR 会触发 GitHub Actions，校验索引格式、GitHub 仓库、Release 资产，以及包内 `plugin.json` 的 `id`、`version`、`publisher`、`repository` 与 `name` / `description`。
+- 索引中出现的每种语言文本必须与包内清单一致；索引未覆盖的语言只给出警告。
+- 提交前可在本地运行 `python3 scripts/validate_index.py`，需要先安装依赖：`python3 -m pip install jsonschema`。
