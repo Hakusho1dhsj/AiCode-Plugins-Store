@@ -32,8 +32,8 @@
 | 字段 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `id` | string | 是 | 插件唯一标识，必须与包内 `plugin.json` 的 `id` 一致，格式为 `发布者.插件名` |
-| `name` | string | 是 | 插件展示名称 |
-| `description` | string | 是 | 插件简介 |
+| `name` | string \| object | 是 | 插件展示名称，可写成字符串或语言映射 |
+| `description` | string \| object | 是 | 插件简介，可写成字符串或语言映射 |
 | `author` | string | 是 | 发布者标识，必须与包内 `plugin.json` 的 `publisher` 一致 |
 | `repository` | string | 是 | 插件源码仓库，必须为 GitHub 仓库地址 |
 | `logo` | string | 否 | 插件图标地址，必须为 https URL |
@@ -47,6 +47,15 @@
 
 `provider`、`tool`、`skill`、`agent`、`mcp`、`ui`、`integration`、`other`。
 
+### 本地化文本
+
+`name` 与 `description` 可以写成两种形式：
+
+- 单一字符串：对所有语言生效；
+- 语言标签到文本的映射，可含 `default` 键：`{"default": "Demo Kit", "zh-CN": "演示套件"}`。
+
+取值顺序：完整标签（`zh-CN`）→ 语言部分（`zh`）→ `default` → `en` → 第一项。标签统一为小写、`-` 分隔，`zh_CN` 与 `zh-cn` 视为同一个；标签必须是 `zh`、`zh-cn` 这类语言标签，最多 16 种。`name` 最多 120 字符且不允许换行，`description` 最多 2000 字符且允许换行。
+
 ## 示例
 
 ```json
@@ -55,8 +64,8 @@
   "plugins": [
     {
       "id": "author-name.aicode-sample-plugin",
-      "name": "AiCode Sample Plugin",
-      "description": "An AiCode sample plugin.",
+      "name": { "default": "AiCode Sample Plugin", "zh-CN": "AiCode 示例插件" },
+      "description": { "default": "An AiCode sample plugin.", "zh-CN": "一个 AiCode 示例插件。" },
       "author": "author-name",
       "repository": "https://github.com/author-name/aicode-sample-plugin",
       "logo": "https://raw.githubusercontent.com/author-name/aicode-sample-plugin/main/logo.png",

@@ -24,6 +24,34 @@
       "pattern": "^https://",
       "maxLength": 1024
     },
+    "languageTag": {
+      "type": "string",
+      "pattern": "^([Dd][Ee][Ff][Aa][Uu][Ll][Tt]|[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*)$"
+    },
+    "localizedName": {
+      "oneOf": [
+        { "type": "string", "minLength": 1, "maxLength": 120 },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 16,
+          "propertyNames": { "$ref": "#/$defs/languageTag" },
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 120 }
+        }
+      ]
+    },
+    "localizedDescription": {
+      "oneOf": [
+        { "type": "string", "minLength": 1, "maxLength": 2000 },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 16,
+          "propertyNames": { "$ref": "#/$defs/languageTag" },
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 2000 }
+        }
+      ]
+    },
     "plugin": {
       "type": "object",
       "additionalProperties": false,
@@ -34,8 +62,8 @@
           "pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*$",
           "maxLength": 96
         },
-        "name": { "type": "string", "minLength": 1, "maxLength": 120 },
-        "description": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "name": { "$ref": "#/$defs/localizedName" },
+        "description": { "$ref": "#/$defs/localizedDescription" },
         "author": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9-]*$",
