@@ -17,6 +17,23 @@
       "license": "MIT",
       "tags": ["ui"],
       "version": "1.0.0"
+    },
+    {
+      "id": "jieapi.remote-ports",
+      "name": {
+        "default": "Remote Ports",
+        "zh-CN": "远程端口",
+        "en": "Remote Ports"
+      },
+      "description": {
+        "default": "Expose ports from the remote SSH server on the phone's loopback, so the AI and the on-device browser can open dev servers behind NAT.",
+        "zh-CN": "把远程 SSH 服务器上的端口映射到手机本地，让 AI 与手机上的浏览器能打开 NAT 后面的开发服务器。"
+      },
+      "author": "jieapi",
+      "repository": "https://github.com/jieapi/aicode-plugin-remote-ports",
+      "license": "MIT",
+      "tags": ["tool", "ui"],
+      "version": "1.0.0"
     }
   ]
 }
