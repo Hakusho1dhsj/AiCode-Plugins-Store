@@ -13,6 +13,7 @@
       },
       "author": "jieapi",
       "repository": "https://github.com/jieapi/aicode-plugin-desktop-pet",
+      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugin-desktop-pet/main/icons/icon.png",
       "license": "MIT",
       "tags": ["ui"],
       "version": "1.0.0"
