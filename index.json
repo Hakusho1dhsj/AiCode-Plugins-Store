@@ -47,8 +47,8 @@
         "zh-CN": "AiCode 桌宠"
       },
       "description": {
-        "default": "A floating desktop pet adapted from dsh-pet for AiCode. It plays transparent animations, reacts to AiCode runs, accepts chat prompts and can be controlled by AI tools.",
-        "zh-CN": "将 dsh-pet 适配到 AiCode 的悬浮桌宠：播放透明动画、响应 AiCode 运行状态、写入聊天提示词，并支持 AI 工具控制。"
+        "default": "A floating desktop pet adapted from dsh-pet for AiCode. It plays transparent animations, reacts to AiCode runs, speaks lines generated from a persona, and can be controlled by AI tools.",
+        "zh-CN": "将 dsh-pet 适配到 AiCode 的悬浮桌宠：播放透明动画、响应 AiCode 运行状态、按人设生成台词，并支持 AI 工具控制与摸头喂食互动。"
       },
       "author": "wxichen",
       "repository": "https://github.com/wxichen/aicode-plugins",
@@ -57,7 +57,30 @@
       "tags": [
         "ui",
         "other"
-      ]
+      ],
+      "version": "0.10.0"
+    },
+    {
+      "id": "wxichen.guizang-design",
+      "name": {
+        "default": "Guizang Design",
+        "zh-CN": "歸藏设计"
+      },
+      "description": {
+        "default": "Port of the guizang-design DSH plugin: web decks, social cards, page layout, de-AI editing and a voice profile, sharing one design system, plus a work library that keeps every piece you deliver.",
+        "zh-CN": "从 DSH 插件移植：网页 PPT、图文卡片、网页排版、去 AI 味四个技能，外加一个学你写作语气的语气档案；五个技能共用一套设计系统，做过的作品自动收进作品库，可以一键做同款。"
+      },
+      "author": "wxichen",
+      "repository": "https://github.com/wxichen/aicode-plugins",
+      "logo": "https://raw.githubusercontent.com/wxichen/aicode-plugins/main/guizang-design/assets/icon.png",
+      "homepage": "https://github.com/wxichen/aicode-plugins/tree/main/guizang-design",
+      "license": "AGPL-3.0",
+      "tags": [
+        "skill",
+        "ui",
+        "tool"
+      ],
+      "version": "1.0.0"
     }
   ]
 }
