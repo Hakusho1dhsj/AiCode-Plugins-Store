@@ -190,6 +190,20 @@
         "integration"
       ],
       "version": "1.0.3"
+    },
+    {
+      "id": "lcs.workbuddy",
+      "name": "WorkBuddy 助手",
+      "description": "在容器内运行 WorkBuddy（codebuddy.ai / workbuddy.ai）本地 OpenAI 兼容网关：账号池轮换、令牌自动刷新、失败账号冷却，自动注入 WorkBuddy 专有请求头并支持 SSE 流式转发。面板可设备码登录或导入凭证、查看额度与成长任务、每日签到，并把 http://127.0.0.1:18913/v1 直接接进 AiCode 的 provider。",
+      "author": "lcs",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/lcs.workbuddy/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "provider",
+        "integration"
+      ],
+      "version": "1.0.0"
     }
   ]
 }
