@@ -12,13 +12,13 @@
         "zh-CN": "可拖拽、可点击互动的桌面宠物：跟随 AI 运行状态变化，长按打开菜单，可在配置页调整大小与显示时机。"
       },
       "author": "jieapi",
-      "repository": "https://github.com/jieapi/aicode-plugin-desktop-pet",
-      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugin-desktop-pet/main/icons/icon.png",
+      "repository": "https://github.com/jieapi/aicode-plugins",
+      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugins/main/desktop-pet/icons/icon.png",
       "license": "MIT",
       "tags": [
         "ui"
       ],
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "id": "jieapi.remote-ports",
@@ -32,7 +32,7 @@
         "zh-CN": "把远程 SSH 服务器上的端口映射到手机本地，让 AI 与手机上的浏览器能打开 NAT 后面的开发服务器。"
       },
       "author": "jieapi",
-      "repository": "https://github.com/jieapi/aicode-plugin-remote-ports",
+      "repository": "https://github.com/jieapi/aicode-plugins",
       "license": "MIT",
       "tags": [
         "tool",
@@ -81,6 +81,23 @@
         "tool"
       ],
       "version": "1.0.0"
+    },
+    {
+      "id": "jieapi.cpa-gateway",
+      "name": {
+        "default": "CPA Gateway",
+        "zh-CN": "CPA 网关"
+      },
+      "description": {
+        "default": "Runs CLIProxyAPI (CLI Proxy API) inside the container, registers it as an OpenAI-compatible provider, and exposes start/stop/logs from the sidebar.",
+        "zh-CN": "在容器内运行 CLIProxyAPI（CLI Proxy API），自动注册为 OpenAI 兼容提供商，并在侧栏提供启停、日志与配置入口。"
+      },
+      "author": "jieapi",
+      "repository": "https://github.com/jieapi/aicode-plugins",
+      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugins/main/cpa-gateway/icons/logo.png",
+      "license": "MIT",
+      "tags": ["provider", "tool", "ui"],
+      "version": "0.1.0"
     }
   ]
 }

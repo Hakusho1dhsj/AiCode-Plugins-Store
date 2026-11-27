@@ -4,7 +4,7 @@
 
 本仓库是 AiCode 的插件索引仓库，仅维护一个 `index.json`，用于描述可用插件及其发布信息。
 
-插件源码与安装包不存放在本仓库。每个插件由作者在自己的 GitHub 仓库中维护，并通过该仓库的 Release 发布安装包。
+插件源码与安装包不存放在本仓库。插件可以分别维护在独立仓库，也可以由多个插件共享一个 GitHub monorepo；每个插件通过源码仓库的 Release 发布自己的安装包。
 
 ## 仓库结构
 
@@ -42,7 +42,7 @@
 | `name` | string \| object | 是 | 插件展示名称，可写成字符串或语言映射 |
 | `description` | string \| object | 是 | 插件简介，可写成字符串或语言映射 |
 | `author` | string | 是 | 发布者标识，必须与包内 `plugin.json` 的 `publisher` 一致 |
-| `repository` | string | 是 | 插件源码仓库，必须为 GitHub 仓库地址 |
+| `repository` | string | 是 | 插件源码仓库，必须为 GitHub 仓库地址；多个插件可以填写同一个仓库 |
 | `logo` | string | 否 | 插件图标地址，必须为 https URL |
 | `homepage` | string | 否 | 项目主页地址，必须为 https URL |
 | `license` | string | 否 | 许可证标识，例如 `MIT` |
@@ -88,12 +88,12 @@
 
 ## Release 规范
 
-- 资产文件名为 `{id}_{version}.zip`。
+- 资产文件名为 `{id}_{version}.zip`；同一个 Release 或同一个仓库可以同时发布多个插件资产。
 
 ## 维护约定
 
-- 一个插件对应 `plugins` 数组中的一个对象。
-- 插件作者更新时修改自己的对象并提交 PR。
+- 一个插件对应 `plugins` 数组中的一个对象；多个对象可以共享同一个 `repository`。
+- 插件作者更新自己的对象并提交 PR。
 - 推送到 `main` 和 PR 会触发 GitHub Actions，校验索引格式、GitHub 仓库、Release 资产，以及包内 `plugin.json` 的 `id`、`version`、`publisher`、`repository` 与 `name` / `description`。
 - 索引中出现的每种语言文本必须与包内清单一致；索引未覆盖的语言只给出警告。
 - 提交前可在本地运行 `python3 scripts/validate_index.py`，需要先安装依赖：`python3 -m pip install jsonschema`。
