@@ -96,8 +96,100 @@
       "repository": "https://github.com/jieapi/aicode-plugins",
       "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugins/main/cpa-gateway/icons/logo.png",
       "license": "MIT",
-      "tags": ["provider", "tool", "ui"],
+      "tags": [
+        "provider",
+        "tool",
+        "ui"
+      ],
       "version": "0.1.0"
+    },
+    {
+      "id": "lcs.breach",
+      "name": "破甲台",
+      "description": "把 GPT 系列的破甲提示词包做成可注入的资源：列出包目录（含目标模型、字节、sha、公开评测读数），取正文，写进 AiCode 自己的自定义提示词或 Codex 的 model_instructions_file。三个已发布包（GPT-6 Astra / GPT-6.1 Sol / GPT-5.6 Sol），两个未发布条目只展示状态。",
+      "author": "lcs",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/lcs.breach/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "agent",
+        "tool"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "dsh.purge",
+      "name": {
+        "default": "DSH Purge",
+        "zh-CN": "破甲注入器"
+      },
+      "description": {
+        "default": "Ship the DeepSeek Harness jailbreak prompt library into AiCode: browse and edit the persona prompt plus six red-team role prompts, inject them into AiCode custom prompts or a DSH prompt-inject.md, and install the bundled red-team skill pack.",
+        "zh-CN": "把 DeepSeek Harness 破甲插件（dsh-purge）的提示词库搬进 AiCode：浏览、编辑小码酱破甲提示词与六个红队角色提示词，一键注入到 AiCode 自定义提示词或 DSH 的 prompt-inject.md，并安装随包的红队技能包。"
+      },
+      "author": "dsh",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/dsh.purge/icons/icon.png",
+      "license": "SEE LICENSE",
+      "tags": [
+        "agent",
+        "skill"
+      ],
+      "version": "1.0.1"
+    },
+    {
+      "id": "raccoon.gateway",
+      "name": {
+        "default": "Raccoon Gateway",
+        "zh-CN": "小浣熊网关"
+      },
+      "description": {
+        "default": "Runs a local OpenAI-compatible gateway for SenseNova Raccoon Work in the container, with a pooled account pool, automatic token refresh, daily check-in, and QR-code / SMS login.",
+        "zh-CN": "在容器内运行商汤小浣熊（Raccoon Work）的本地 OpenAI 兼容网关，支持账号池轮换、令牌自动续期、每日自动签到，以及扫码与短信登录。"
+      },
+      "author": "raccoon",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/raccoon.gateway/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "provider",
+        "integration"
+      ],
+      "version": "1.0.1"
+    },
+    {
+      "id": "lcs.hotwater",
+      "name": "热开水",
+      "description": "热开水人设装配台：把「热开水」这层身份锁定注入到本会话或本机各个 Agent 的人设槽。七个席位（Codex / Claude Code / Grok / Cursor / DeepSeek / GLM / WorkBuddy）加一个总控包，五个档位（MAX / 聚焦 / 构建 / 研究 / 创作），五条工作链（拆解 / 开锁 / 深入 / 采集 / 训练）。生成注入包并按目标写盘，写入 AiCode 自己的自定义提示词时下一次会话直接生效。",
+      "author": "lcs",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/lcs.hotwater/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "agent",
+        "tool"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "jinghan.spoof-proxy",
+      "name": {
+        "zh-CN": "客户端伪装反代",
+        "default": "Client Spoof Proxy"
+      },
+      "description": {
+        "zh-CN": "本地 HTTP 反代 + 原生钩子双模式：把请求伪装成 Codex / Claude Code 等白名单客户端后转发到中转站，绕开「仅支持编程客户端」的 403。原生接管模式下无需修改供应商 baseUrl。",
+        "default": "Local reverse proxy that spoofs whitelisted coding clients."
+      },
+      "author": "jinghan",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "logo": "https://raw.githubusercontent.com/Hakusho1dhsj/wuziqi/aicode-plugins/jinghan.spoof-proxy/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "provider",
+        "integration"
+      ],
+      "version": "1.0.3"
     }
   ]
 }
