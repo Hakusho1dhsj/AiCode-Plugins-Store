@@ -224,6 +224,25 @@
         "skill"
       ],
       "version": "1.0.0"
+    },
+    {
+      "id": "jieapi.backup-helper",
+      "name": {
+        "default": "Backup Helper",
+        "zh-CN": "备份助手"
+      },
+      "description": {
+        "default": "Adds memories, skills, MCP configs and subagents to the host backup archive, and restores them after an import. Requires the plugin-level backup event permission.",
+        "zh-CN": "把记忆、技能、MCP 配置与子代理写入宿主备份包，并在导入还原后写回。需要在插件详情中单独开启「备份与还原事件」授权。"
+      },
+      "author": "jieapi",
+      "repository": "https://github.com/jieapi/aicode-plugins",
+      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugins/main/backup-helper/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "integration"
+      ],
+      "version": "1.0.0"
     }
   ]
 }
