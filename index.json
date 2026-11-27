@@ -204,6 +204,26 @@
         "integration"
       ],
       "version": "1.0.0"
+    },
+    {
+      "id": "jieapi.plugin-guide",
+      "name": {
+        "default": "Plugin Dev & Release Guide",
+        "zh-CN": "插件开发与发布指南",
+        "en": "Plugin Dev & Release Guide"
+      },
+      "description": {
+        "default": "Two skills covering the full AiCode plugin lifecycle: repository layout, plugin.json, capability selection, SDK handlers and pages, developer sideloading, packaging limits, publishing the Release asset in your own repository, and the index pull request that lists the plugin in the store.",
+        "zh-CN": "两个技能覆盖 AiCode 插件的完整生命周期：仓库结构、plugin.json 清单、能力选型、SDK handler 与页面、开发者侧载、打包限制、在自有仓库发布 Release 资产，以及提交索引 PR 上架插件商店。"
+      },
+      "author": "jieapi",
+      "repository": "https://github.com/jieapi/aicode-plugins",
+      "logo": "https://raw.githubusercontent.com/jieapi/aicode-plugins/main/plugin-guide/icons/icon.png",
+      "license": "MIT",
+      "tags": [
+        "skill"
+      ],
+      "version": "1.0.0"
     }
   ]
 }
