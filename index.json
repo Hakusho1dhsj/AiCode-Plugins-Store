@@ -224,6 +224,17 @@
         "skill"
       ],
       "version": "1.0.0"
+    },
+    {
+      "id": "lcs.selftest",
+      "name": "自检条目",
+      "description": "提交链路自检用的临时条目。",
+      "author": "lcs",
+      "repository": "https://github.com/Hakusho1dhsj/wuziqi",
+      "tags": [
+        "tool"
+      ],
+      "version": "0.0.1"
     }
   ]
 }
